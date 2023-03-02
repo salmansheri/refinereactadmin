@@ -59,7 +59,7 @@ function App() {
 
       /* save users to mongodb */
       if (profileObj) {
-        const response = await fetch("http://localhost:5000/api/v1/user", {
+        const response = await fetch("https://refinereactadmin.onrender.com//api/v1/user", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -128,7 +128,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://localhost:5000/api/v1")}
+          dataProvider={dataProvider("https://refinereactadmin.onrender.com//api/v1")}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
